@@ -1,0 +1,21 @@
+using "Peoples.People" as P;
+
+context HumanResources {
+    context Recruitment {
+        entity Employee {
+            key id   : Integer;
+                name : String(100);
+        };
+    };
+};
+
+/*@@layout{"layoutInfo":{"x":-24.0068359375,"y":68.5}}*/
+context box {
+	define view peopleView as
+		select from P {
+			P.id			as id,
+			P.first_name	as first_name,
+			P.last_name		as last_name,
+			P.full_name		as full_name
+		};
+}; 

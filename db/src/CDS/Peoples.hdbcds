@@ -1,0 +1,10 @@
+context Peoples {
+
+    /*@@layout{"layoutInfo":{"x":-143,"y":-168.5}}*/
+    entity People {
+        key id         : Integer not null;
+            first_name : String(50);
+            last_name  : String(50);
+            full_name  : String(100) generated always as first_name + +last_name;
+    };
+};
